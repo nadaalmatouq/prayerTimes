@@ -21,7 +21,7 @@ struct ContentView: View {
            
             
             
-            Color(#colorLiteral(red: 0.1601957646, green: 0.02272291145, blue: 0.4027998096, alpha: 1)).edgesIgnoringSafeArea(.all)
+            clr.edgesIgnoringSafeArea(.all)
            
             //
             
@@ -48,6 +48,7 @@ struct ContentView: View {
                 
                 ZStack{
                     
+                     Rectangle().fill(Color(#colorLiteral(red: 0.7470922559, green: 0.7744685914, blue: 0.7487759313, alpha: 0.3977418664))).frame(width:375 , height:56)
                     HStack{
                     Image(systemName: "chevron.left").foregroundColor(.white).offset(y: 3)
                         Spacer()
@@ -57,12 +58,12 @@ struct ContentView: View {
                     }.padding(.horizontal)
                     
                 
-                Rectangle().fill(Color(#colorLiteral(red: 0.6324119828, green: 0.6626150063, blue: 0.6276317611, alpha: 0.498234161))).frame(width:375 , height:56)
+               
                 }//end mid zstack
                 
                 
                 
-                 Rectangle().fill(Color(#colorLiteral(red: 0.6324119828, green: 0.6626150063, blue: 0.6276317611, alpha: 0.498234161))).frame(width:375 , height:440)
+                 Rectangle().fill(Color(#colorLiteral(red: 0.7470922559, green: 0.7744685914, blue: 0.7487759313, alpha: 0.3977418664))).frame(width:375 , height:440)
                 
             }//main VStack
             
@@ -74,7 +75,7 @@ struct ContentView: View {
                 Spacer()
                 Text("الفجر").foregroundColor(.white).font(.system(size: 25))
             }.onTapGesture {
-                self.clr = Color(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1))
+                self.clr = Color(#colorLiteral(red: 0.1601957646, green: 0.02272291145, blue: 0.4027998096, alpha: 1))
                 
                 }
                 HStack(){
@@ -82,7 +83,9 @@ struct ContentView: View {
                              Text("5:09 AM").foregroundColor(.white).font(.system(size: 25))
                              Spacer()
                              Text("الشروق").foregroundColor(.white).font(.system(size: 25))
-                }.padding(.top,40)
+                }.padding(.top,40).onTapGesture {
+                 self.clr = Color(#colorLiteral(red: 0.7775618655, green: 0.5371388342, blue: 0.1148747531, alpha: 1))
+                }
                 
                 
                 HStack(){
@@ -90,25 +93,33 @@ struct ContentView: View {
                                             Text("11:46 AM").foregroundColor(.white).font(.system(size: 25))
                                             Spacer()
                                             Text("الظهر").foregroundColor(.white).font(.system(size: 25))
-                               }.padding(.top,40)
+                               }.padding(.top,40).onTapGesture {
+                                self.clr = Color(#colorLiteral(red: 0.2146109513, green: 0.4308177348, blue: 0.1651833991, alpha: 1))
+                               }
                 HStack(){
                                             
                                             Text("3:21 PM").foregroundColor(.white).font(.system(size: 25))
                                             Spacer()
                                             Text("العصر").foregroundColor(.white).font(.system(size: 25))
-                               }.padding(.top,40)
+                               }.padding(.top,40).onTapGesture {
+                                self.clr = Color(#colorLiteral(red: 0.7373096447, green: 0.2305773252, blue: 0.136647604, alpha: 1))
+                               }
                 HStack(){
                                             
                                             Text("6:22 PM").foregroundColor(.white).font(.system(size: 25))
                                             Spacer()
                                             Text("المغرب").foregroundColor(.white).font(.system(size: 25))
-                               }.padding(.top,40)
+                               }.padding(.top,40).onTapGesture {
+                                self.clr = Color(#colorLiteral(red: 0.4347997956, green: 0.2306035198, blue: 0.6884716053, alpha: 1))
+                               }
                 HStack(){
                                             
                                             Text("7:45 PM").foregroundColor(.white).font(.system(size: 25))
                                             Spacer()
                                             Text("العشاء").foregroundColor(.white).font(.system(size: 25))
-                               }.padding(.top,40)
+                               }.padding(.top,40).onTapGesture {
+                                self.clr = Color(#colorLiteral(red: 0.1820296456, green: 0.3889184786, blue: 0.7568627596, alpha: 1))
+                               }
                                
                             
                 }.padding(.horizontal,60).offset(y: 120)//mini VStack 2
